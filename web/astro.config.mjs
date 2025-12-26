@@ -36,7 +36,7 @@ export default defineConfig({
 			],
 			// 3. 开启公式支持 CSS
 			customCss: [
-				'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
+				'katex/dist/katex.min.css',
 			],
 		}),
 	],

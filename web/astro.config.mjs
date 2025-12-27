@@ -1,33 +1,35 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-// 1. 引入公式插件
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: '高中物理资源库', // 网站主标题
+			title: '高中物理资源库',
 			defaultLocale: 'zh-cn',
 			locales: {
-				root: { label: '简体中文', lang: 'zh-CN' },
+				root: {
+					label: '简体中文',
+					lang: 'zh-CN',
+				},
 			},
+			// --- 这里删掉了 announcement 以解决报错 ---
 			
-			// 1. 自定义 Logo (这里我们用一个物理图标代替图片，最省事)
-			logo: {
-				src: './src/assets/houston.webp', // 暂时用默认图片，或者你可以删掉这就只显示文字
-				replacesTitle: false, // 设置为 true 则隐藏文字标题
-			},
-
-			// --- 修正点 1：公告栏配置 ---
-			announcement: {
-				content: '📢 <strong>最新通知：</strong> 必修一《第一章》课件已更新，欢迎下载！',
-			},
-			// --- 修正点 2：隐藏底部广告 ---
+			// 隐藏底部广告
 			credits: false,
 
-			// 3. 社交链接 (把 GitHub 换成你的邮箱，方便学生联系)
-			
+			// 社交链接 (保持新版数组格式，防止之前的报错)
+			social: [
+				{
+					label: 'GitHub',
+					link: 'https://github.com/', 
+					icon: 'github',
+				},
+			],
+
+			// 侧边栏菜单
 			sidebar: [
 				{
 					label: '必修一',
@@ -49,14 +51,14 @@ export default defineConfig({
 					],
 				},
 			],
-			// 3. 开启公式支持 CSS
+			// 公式样式
 			customCss: [
 				'katex/dist/katex.min.css',
 			],
 		}),
 	],
+	// Markdown 公式插件
 	markdown: {
-		// 4. 启用 Markdown 插件
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [rehypeKatex],
 	},

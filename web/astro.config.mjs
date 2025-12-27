@@ -3,52 +3,61 @@ import starlight from '@astrojs/starlight';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-// https://astro.build/config
 export default defineConfig({
 	integrations: [
 		starlight({
 			title: '高中物理资源库',
 			defaultLocale: 'zh-cn',
-			locales: {
-				root: {
-					label: '简体中文',
-					lang: 'zh-CN',
-				},
-			},
+			locales: { root: { label: '简体中文', lang: 'zh-CN' } },
+			credits: false, // 隐藏底部广告
+			customCss: ['katex/dist/katex.min.css'], // 公式样式
 			
-			// --- 核心配置：隐藏底部广告 ---
-			credits: false,
-
-			// --- 核心配置：侧边栏菜单 ---
+			// --- 侧边栏结构重构 ---
 			sidebar: [
 				{
-					label: '必修一',
+					label: '📚 资源共建',
 					items: [
-						{ label: '第一章：运动的描述', link: '/bixiu1/chap1/' },
-						{ label: '第二章：匀变速直线运动', link: '/bixiu1/chap2/' },
+						{ label: '📤 上传资源', link: '/upload/' }, // 新增上传入口
 					],
 				},
 				{
-					label: '必修二',
+					label: '📖 电子课本',
 					items: [
-						{ label: '第五章：抛体运动', link: '/bixiu2/chap5/' },
+						{ label: '必修一', link: '/textbooks/bixiu1/' },
+						{ label: '必修二', link: '/textbooks/bixiu2/' },
+						{ label: '必修三', link: '/textbooks/bixiu3/' },
 					],
 				},
 				{
-					label: '试卷真题',
+					label: '🖥️ PPT 课件',
 					items: [
-						{ label: '2024年高考试卷', link: '/papers/2024-gaokao/' },
+						{ label: '高一课件', link: '/ppts/grade1/' },
+						{ label: '高二课件', link: '/ppts/grade2/' },
 					],
 				},
-			],
-			
-			// --- 核心配置：公式样式 ---
-			customCss: [
-				'katex/dist/katex.min.css',
+				{
+					label: '📝 教学设计',
+					items: [
+						{ label: '优秀教案', link: '/designs/best/' },
+					],
+				},
+				{
+					label: '🧮 典型题库',
+					items: [
+						{ label: '力学典型题', link: '/questions/mechanics/' },
+						{ label: '电磁学典型题', link: '/questions/electromagnetism/' },
+					],
+				},
+				{
+					label: '🚀 试卷真题',
+					items: [
+						{ label: '历年高考', link: '/papers/gaokao/' },
+						{ label: '名校模拟', link: '/papers/mock/' },
+					],
+				},
 			],
 		}),
 	],
-	// --- 核心配置：公式插件 ---
 	markdown: {
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [rehypeKatex],

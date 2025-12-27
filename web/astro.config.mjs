@@ -16,15 +16,10 @@ export default defineConfig({
 				},
 			},
 			
-			// --- 修复重点：使用最原始稳定的社交链接写法 ---
-			social: {
-				github: 'https://github.com/',
-			},
-
-			// 隐藏底部广告
+			// --- 核心配置：隐藏底部广告 ---
 			credits: false,
 
-			// 侧边栏菜单
+			// --- 核心配置：侧边栏菜单 ---
 			sidebar: [
 				{
 					label: '必修一',
@@ -46,13 +41,14 @@ export default defineConfig({
 					],
 				},
 			],
-			// 公式样式
+			
+			// --- 核心配置：公式样式 ---
 			customCss: [
 				'katex/dist/katex.min.css',
 			],
 		}),
 	],
-	// Markdown 公式插件
+	// --- 核心配置：公式插件 ---
 	markdown: {
 		remarkPlugins: [remarkMath],
 		rehypePlugins: [rehypeKatex],

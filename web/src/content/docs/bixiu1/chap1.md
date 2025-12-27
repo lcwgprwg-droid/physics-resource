@@ -66,3 +66,35 @@ $$
 3.  **辨析**：通过百米赛跑案例，讨论“快”的含义（速度）。
 
 </Steps>
+## 📖 电子课本在线阅读
+
+<!-- 1. PDF 预览窗口 -->
+<embed 
+  src="/files/book1.pdf" 
+  type="application/pdf" 
+  width="100%" 
+  height="600px" 
+/>
+
+<!-- 2. 纯净下载按钮 -->
+<div style="margin-top: 20px; text-align: center;">
+  <a href="/files/book1.pdf" download="高中物理必修一.pdf" style="background: #3b82f6; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+    📥 点击直接下载 PDF (无须网盘)
+  </a>
+</div>
+## 🖥️ 课件演示
+
+<!-- 预览区：展示 PDF 版课件，手机也能看 -->
+<embed 
+  src="/files/slide1.pdf" 
+  type="application/pdf" 
+  width="100%" 
+  height="500px" 
+/>
+
+<!-- 下载区：提供可编辑的 PPT -->
+<div style="margin-top: 20px; text-align: center;">
+  <a href="/files/slide1.pptx" download style="background: #10b981; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold;">
+    📥 下载原版 PPT (可编辑)
+  </a>
+</div>

@@ -7,12 +7,29 @@ import rehypeKatex from 'rehype-katex';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: '高中物理资源库',
+			title: '高中物理资源库', // 网站主标题
 			defaultLocale: 'zh-cn',
 			locales: {
 				root: { label: '简体中文', lang: 'zh-CN' },
 			},
-			// 2. 配置侧边栏 (这里我们规划好了未来的栏目)
+			
+			// 1. 自定义 Logo (这里我们用一个物理图标代替图片，最省事)
+			logo: {
+				src: './src/assets/houston.webp', // 暂时用默认图片，或者你可以删掉这就只显示文字
+				replacesTitle: false, // 设置为 true 则隐藏文字标题
+			},
+
+			// 2. 顶部公告栏 (非常实用！)
+			lastUpdated: true, // 显示文章最后更新时间
+			announcement: {
+				content: '📢 <strong>期末冲刺：</strong> 必修一《牛顿运动定律》复习课件已上传！',
+				dismissible: true, // 允许用户点击关闭
+			},
+
+			// 3. 社交链接 (把 GitHub 换成你的邮箱，方便学生联系)
+			social: {
+				email: 'mailto:your-email@example.com', // 换成你的邮箱
+			},
 			sidebar: [
 				{
 					label: '必修一',

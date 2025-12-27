@@ -7,8 +7,8 @@ hero:
   image:
     file: ../../assets/houston.webp
   actions:
-    - text: 浏览必修一
-      link: /bixiu1/chap1/
+    - text: 浏览电子课本
+      link: /textbooks/
       icon: right-arrow
       variant: primary
     - text: 访问 GitHub
@@ -25,25 +25,25 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
   <LinkCard
     title="📘 电子课本"
     icon="open-book"
-    href="/textbooks/"   <-- 改为指向 textbooks 目录
+    href="/textbooks/"
     description="人教版高中物理全套电子书"
   />
   <LinkCard
     title="📝 精选课件"
     icon="pencil"
-    href="/ppts/"        <-- 改为指向 ppts 目录 (需新建对应index.md)
+    href="/ppts/"
     description="按章节分类的优质PPT资源"
   />
   <LinkCard
     title="🧮 典型题库"
     icon="setting"
-    href="/questions/"   <-- 改为指向 questions 目录
+    href="/questions/"
     description="力学、电磁学经典模型解析"
   />
   <LinkCard
     title="🚀 历年真题"
     icon="rocket"
-    href="/papers/"      <-- 改为指向 papers 目录
+    href="/papers/"
     description="全国卷及各地模拟题下载"
   />
 </CardGrid>
@@ -51,5 +51,5 @@ import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 ---
 
 ## 🌟 最新更新
-- **2025-12-27**: 更新了必修一第一章课件。
+- **2025-12-27**: 网站结构升级，新增上传功能。
 - **2025-12-26**: 上线 2024 年高考物理真题。

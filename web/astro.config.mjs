@@ -15,19 +15,14 @@ export default defineConfig({
 					lang: 'zh-CN',
 				},
 			},
-			// --- 这里删掉了 announcement 以解决报错 ---
 			
+			// --- 修复重点：使用最原始稳定的社交链接写法 ---
+			social: {
+				github: 'https://github.com/',
+			},
+
 			// 隐藏底部广告
 			credits: false,
-
-			// 社交链接 (保持新版数组格式，防止之前的报错)
-			social: [
-				{
-					label: 'GitHub',
-					link: 'https://github.com/', 
-					icon: 'github',
-				},
-			],
 
 			// 侧边栏菜单
 			sidebar: [

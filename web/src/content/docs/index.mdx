@@ -11,23 +11,45 @@ hero:
       link: /bixiu1/chap1/
       icon: right-arrow
       variant: primary
+    - text: 访问 GitHub
+      link: https://github.com/
+      icon: external
+      variant: minimal
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## 📚 资源导航
 
 <CardGrid stagger>
-	<Card title="电子课本" icon="open-book">
-		高清 PDF 课本，支持在线预览与下载。
-	</Card>
-	<Card title="精选课件" icon="pencil">
-		一线名师制作的 PPT，动画演示物理过程。
-	</Card>
-	<Card title="典型题库" icon="setting">
-		按知识点分类的经典例题，附详细解析。
-	</Card>
-	<Card title="历年真题" icon="rocket">
-		近五年全国卷及各省市模拟题汇编。
-	</Card>
+  <LinkCard
+    title="📘 电子课本"
+    icon="open-book"
+    href="/bixiu1/chap1/"
+    description="进入必修一章节，查看高清 PDF 课本"
+  />
+  <LinkCard
+    title="📝 精选课件"
+    icon="pencil"
+    href="/bixiu1/chap1/"
+    description="一线名师制作的 PPT，含动画演示"
+  />
+  <LinkCard
+    title="🧮 典型题库"
+    icon="setting"
+    href="/bixiu1/chap2/"
+    description="按知识点分类的经典例题，附详细解析"
+  />
+  <LinkCard
+    title="🚀 历年真题"
+    icon="rocket"
+    href="/papers/2024-gaokao/"
+    description="2024年全国卷及各省市模拟题汇编"
+  />
 </CardGrid>
+
+---
+
+## 🌟 最新更新
+- **2025-12-27**: 更新了必修一第一章课件。
+- **2025-12-26**: 上线 2024 年高考物理真题。

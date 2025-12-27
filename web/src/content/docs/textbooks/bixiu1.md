@@ -27,20 +27,11 @@ import { Icon } from '@astrojs/starlight/components';
   </div>
 
   <!-- 3. 操作栏：下载当前版本 / 上传新版本 -->
-  <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
-    
-    <!-- 下载按钮：下载的就是上面预览的同一个文件 -->
-    <a href="/files/demo.pdf" download="高中物理必修一_v1.0.pdf" 
-       style="flex: 2; background-color: #2563eb; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">
-       📥 下载此文档
-    </a>
-
-    <!-- 上传按钮：逻辑是“补充/更新” -->
-    <a href="https://docs.qq.com/form/page/你的腾讯文档ID" target="_blank"
-       style="flex: 1; background-color: #059669; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">
-       📤 上传更清晰的版本
-    </a>
-  </div>
+  <!-- 操作栏：下载与上传 -->
+<div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+<a href="/files/demo.pdf" download="高中物理必修一_v1.0.pdf" style="flex: 2; background-color: #2563eb; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">📥 下载此文档</a>
+<a href="https://docs.qq.com/form/page/DUkRqSXRVS1BWVWRQ" target="_blank" style="flex: 1; background-color: #059669; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">📤 上传/更新</a>
+</div>
 
   <!-- 4. 逻辑说明 -->
   <p style="margin-top: 10px; font-size: 0.85em; color: #6b7280; text-align: center;">

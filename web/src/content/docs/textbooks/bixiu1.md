@@ -11,6 +11,7 @@ description: 实时资源库 · 支持上传与下载
 
 <!-- 嵌入 Alist 对应文件夹 -->
 <!-- 嵌入 Alist 文件柜 (纯净大屏版) -->
+<!-- 嵌入 Alist 文件柜 (加长版) -->
 <div style="margin-top: 20px; width: 100%;">
   <iframe 
     src="https://phy-yyh.zeabur.app/%E5%BF%85%E4%BF%AE%E4%B8%80%E8%AF%BE%E6%9C%AC" 
@@ -18,7 +19,7 @@ description: 实时资源库 · 支持上传与下载
     height="1200px" 
     frameborder="0"
     allow="clipboard-read; clipboard-write"
-    style="border: none;"
+    style="border: 1px solid #eee; border-radius: 8px;"
   >
   </iframe>
 </div>

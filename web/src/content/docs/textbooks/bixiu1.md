@@ -1,47 +1,22 @@
 ---
-title: 必修第一册 (人教版)
-description: 核心教材 · 高清扫描版
+title: 必修第一册 (资源协作)
+description: 实时资源库 · 支持上传与下载
 ---
 
-import { Icon } from '@astrojs/starlight/components';
+:::tip[使用说明]
+这是本章节的**实时资源柜**。
+*   **下载**：点击文件名即可直接下载。
+*   **上传**：点击右下角的 **☁️ 上传图标**，即可贡献你的文件（不会覆盖他人文件）。
+:::
 
-<!-- 🟢 核心逻辑区：所见即所得 -->
-<div style="background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-
-  <!-- 1. 状态栏：告诉用户当前预览的是什么 -->
-  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-    <span style="font-weight: bold; color: #374151; display: flex; align-items: center; gap: 6px;">
-      👁️ 当前预览版本：v1.0 (demo.pdf)
-    </span>
-    <span style="font-size: 0.9em; color: #6b7280;">文件大小：15MB</span>
-  </div>
-
-  <!-- 2. 预览窗口 (加载 public/files/demo.pdf) -->
-  <div style="border: 1px solid #d1d5db; border-radius: 8px; overflow: hidden; height: 600px; background: white;">
-    <embed 
-      src="/files/demo.pdf" 
-      type="application/pdf" 
-      width="100%" 
-      height="100%" 
-    />
-  </div>
-
-  <!-- 3. 操作栏：下载当前版本 / 上传新版本 -->
-  <!-- 操作栏：下载与上传 -->
-<div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
-<a href="/files/demo.pdf" download="高中物理必修一_v1.0.pdf" style="flex: 2; background-color: #2563eb; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">📥 下载此文档</a>
-<a href="https://docs.qq.com/form/page/DUkRqSXRVS1BWVWRQ" target="_blank" style="flex: 1; background-color: #059669; color: white; text-decoration: none; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px;">📤 上传/更新</a>
+<!-- 嵌入 Alist 对应文件夹 -->
+<div style="border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); height: 800px;">
+  <iframe 
+    src="https://phy-yyh.zeabur.app/%E5%BF%85%E4%BF%AE%E4%B8%80%E8%AF%BE%E6%9C%AC" 
+    width="100%" 
+    height="100%" 
+    frameborder="0"
+    allow="clipboard-read; clipboard-write"
+  >
+  </iframe>
 </div>
-
-  <!-- 4. 逻辑说明 -->
-  <p style="margin-top: 10px; font-size: 0.85em; color: #6b7280; text-align: center;">
-    * 预览加载失败？请点击左侧按钮直接下载查看。
-  </p>
-
-</div>
-
----
-
-### 📑 章节快速导航
-- [第一章：运动的描述](/bixiu1/chap1/)
-- [第二章：匀变速直线运动](/bixiu1/chap2/)

@@ -34,7 +34,7 @@ import { Icon } from '@astrojs/starlight/components';
   </a>
 
   <!-- 2. 上传按钮 (链接到你的腾讯文档) -->
-  <a href="https://docs.qq.com/form/page/你的腾讯文档ID" target="_blank"
+  <a href="https://docs.qq.com/form/page/DUkRqSXRVS1BWVWRQ" target="_blank"
      style="flex: 1; min-width: 200px; background-color: #10b981; color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; text-align: center; font-weight: bold; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
      📤 我有更好版本/配套练习 (上传)
   </a>
